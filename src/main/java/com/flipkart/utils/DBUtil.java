@@ -1,6 +1,7 @@
 package com.flipkart.utils;
 
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -31,15 +32,6 @@ public class DBUtil {
             return connection;
         else {
             try {
-            	//Properties prop = new Properties();
-                //InputStream inputStream = DBUtil.class.getClassLoader().getResourceAsStream("config.properties");
-                //prop.load(inputStream);
-                //String driver = prop.getProperty("driver");
-                //String url = prop.getProperty("url");
-                //String user = prop.getProperty("user");
-                //String password = prop.getProperty("password");
-                //Class.forName(driver);
-                
                 String driver = "com.mysql.jdbc.Driver";
                 String url = "jdbc:mysql://127.0.0.1/StudentManagement";
                 String user = "root";
@@ -50,7 +42,7 @@ public class DBUtil {
             	logger.fatal(e.getMessage());
             } catch (SQLException e) {
             	logger.fatal(e.getMessage());
-            }
+			}
             return connection;
         }
 
