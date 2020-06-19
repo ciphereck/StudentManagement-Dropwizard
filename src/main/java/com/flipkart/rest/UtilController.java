@@ -17,8 +17,8 @@ import com.flipkart.model.StudentCourse;
 import com.flipkart.service.Service;
 
 @Path("util")
-public class Controller {
-	Logger logger = Logger.getLogger(Controller.class);
+public class UtilController {
+	Logger logger = Logger.getLogger(UtilController.class);
 	Service service = new Service();
 	
 	@GET
@@ -27,11 +27,17 @@ public class Controller {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllCourses() {
 		try {
-			return Response.status(200).entity(service.getAllCourses()).build();
+			return Response
+					.status(200)
+					.entity(service.getAllCourses())
+					.build();
 		} catch (SQLException e) {
 			logger.error(e.getMessage());
 		}
-		return Response.status(200).entity(null).build();
+		return Response
+				.status(200)
+				.entity(null)
+				.build();
 	}
 	
 	@GET

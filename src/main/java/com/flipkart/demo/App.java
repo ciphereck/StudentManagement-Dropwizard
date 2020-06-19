@@ -4,8 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.flipkart.rest.AdminController;
-import com.flipkart.rest.Controller;
+import com.flipkart.rest.UtilController;
 import com.flipkart.rest.CustomerRestController;
+import com.flipkart.rest.ProfessorController;
 import com.flipkart.rest.StudentController;
 import com.flipkart.rest.UserController;
 
@@ -31,9 +32,10 @@ public class App extends Application<Configuration>
         LOGGER.info("Registering REST resources");
         e.jersey().register(new CustomerRestController());
         e.jersey().register(new AdminController());
-        e.jersey().register(new Controller());
+        e.jersey().register(new UtilController());
         e.jersey().register(new StudentController());
         e.jersey().register(new UserController());
+        e.jersey().register(new ProfessorController());
     }
  
     public static void main(String[] args) throws Exception {

@@ -46,7 +46,10 @@ public class AdminController {
 		} catch (SQLException | IllegalRoleException e) {
 			logger.error(e.getMessage());
 		}
-		return Response.status(200).entity(user).build();
+		return Response
+				.status(200)
+				.entity(user)
+				.build();
 	}
 	
 	@PUT

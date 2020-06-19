@@ -38,7 +38,10 @@ public class StudentController {
 		} catch (SQLException | IllegalRoleException e) {
 			logger.error(e.getMessage());
 		}
-		return Response.status(200).entity(user).build();
+		return Response
+				.status(200)
+				.entity(user)
+				.build();
 	}
 	
 	@GET
@@ -47,11 +50,17 @@ public class StudentController {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllCourses(@PathParam("username") String username) {
 		try {
-			return Response.status(200).entity(studentService.getStudentCourse(username)).build();
+			return Response
+					.status(200)
+					.entity(studentService.getStudentCourse(username))
+					.build();
 		} catch (SQLException e) {
 			logger.error(e.getMessage());
 		}
-		return Response.status(200).entity(null).build();
+		return Response.
+				status(200)
+				.entity(null)
+				.build();
 	}
 	
 	@PUT
