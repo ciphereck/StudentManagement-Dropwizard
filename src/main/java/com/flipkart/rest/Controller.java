@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
 import com.flipkart.model.StudentCourse;
 import com.flipkart.service.Service;
 
-@Path("generic")
+@Path("util")
 public class Controller {
 	Logger logger = Logger.getLogger(Controller.class);
 	Service service = new Service();

@@ -34,7 +34,7 @@ public class StudentController {
 	public Response getMyDetails(@PathParam("username") String username) {
 		User user = null;
 		try {
-			user = studentService.getDetailByUsername(username, Roles.ADMIN.toString());
+			user = studentService.getDetailByUsername(username, Roles.STUDENT.toString());
 		} catch (SQLException | IllegalRoleException e) {
 			logger.error(e.getMessage());
 		}

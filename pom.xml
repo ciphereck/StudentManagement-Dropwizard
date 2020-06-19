@@ -35,7 +35,7 @@
     </dependency>
   </dependencies>
   <build>
-        <finalName>DropWizardDemo-${version}</finalName>
+        <finalName>Student Manegement System-${version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
